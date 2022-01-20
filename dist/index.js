@@ -7,8 +7,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const todo_1 = __importDefault(require("./routes/todo"));
 const body_parser_1 = require("body-parser");
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)();
 const app = (0, express_1.default)();
-const PORT = 3000;
+const PORT = process.env.EXPRESS_PORT || 3001;
 app.use((0, body_parser_1.json)());
 app.use('/todo', todo_1.default);
 app.use((err, req, res, next) => {

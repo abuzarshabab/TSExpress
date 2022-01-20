@@ -3,9 +3,11 @@
 import express, { Request, Response, NextFunction } from 'express'
 import todoRoutes from './routes/todo';
 import { json } from 'body-parser';
+import { config } from 'dotenv'; config();
+
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.EXPRESS_PORT || 3001;
 
 app.use(json())
 
