@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Todo = void 0;
 class Todo {
-    constructor(id, text, isCompleted) {
-        this.id = id;
+    constructor(text, isCompleted, _id) {
         this.text = text;
         this.isCompleted = isCompleted;
+        this._id = _id;
     }
     ;
 }

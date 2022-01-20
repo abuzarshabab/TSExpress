@@ -1,5 +1,6 @@
+import { ObjectId } from "mongodb";
 
 export class Todo {
-    constructor(public id: string, public text: string, public isCompleted?: boolean) { };
+    constructor(public text: string, public isCompleted?: boolean, public _id?: ObjectId,) { };
 
 }
